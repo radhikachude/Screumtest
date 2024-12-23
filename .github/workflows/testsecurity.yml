@@ -23,7 +23,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Login to docker hub
-        run: docker login -u ${{secrets.radhikaschude}} -p ${{secrets.Anadhika@1234}}
+        run: docker login -u "radhikaschude" -p "Anadhika@1234"
 
       - name: Build docker image
         run: docker build -t radhikaschude/ScrumMasterUserManagment .
