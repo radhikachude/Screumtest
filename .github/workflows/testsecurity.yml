@@ -26,10 +26,10 @@ jobs:
         run: docker login -u "radhikaschude" -p "Anadhika@1234"
 
       - name: Build docker image
-        run: docker build -t radhikaschude/ScrumMasterUserManagment .
+        run: docker build -t radhikaschude/scrummasterusermanagment .
 
       - name: Publish image to docker hub
-        run: docker push radhikaschude/ScrumMasterUserManagment:latest
+        run: docker push radhikaschude/scrummasterusermanagment:latest
 
   deploy-to-qa:
     needs: build
@@ -43,7 +43,7 @@ jobs:
       #   run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
       - name: Pull Image from Docker Hub
-        run: docker pull radhikaschude/ScrumMasterUserManagment:latest
+        run: docker pull radhikaschude/scrummasterusermanagment:latest
 
       - name: Stop and Remove Old Container
         run: |
@@ -52,4 +52,4 @@ jobs:
 
       - name: Run Docker Container
         run: |
-          docker run -d -p 8080:8080 --restart unless-stopped --name springboot-example-container radhikaschude/ScrumMasterUserManagment:latest
+          docker run -d -p 8080:8080 --restart unless-stopped --name springboot-example-container radhikaschude/scrummasterusermanagment:latest
