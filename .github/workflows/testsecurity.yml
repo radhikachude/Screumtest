@@ -26,9 +26,9 @@ jobs:
         run: docker login -u "radhikaschude" -p "Anadhika@1234"
 
       - name: Build docker image
-        run: docker build -t radhikaschude/scrummasterusermanagment .
+        run: docker build -t radhikaschude/spring-security-test .
 
       - name: Publish image to docker hub
-        run: docker push radhikaschude/scrummasterusermanagment:latest
+        run: docker push radhikaschude/spring-security-test:latest
 
   
