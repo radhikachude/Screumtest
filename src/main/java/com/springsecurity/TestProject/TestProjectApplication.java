@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@EnableDiscoveryClient		
 @ComponentScan(basePackages = {"com.springsecurity.TestProject"})
 public class TestProjectApplication {
 
